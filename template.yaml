@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  covid-api-lambda
+
+  Sample SAM Template for covid-api-lambda
+
+Globals:
+  Function:
+    Timeout: 10
+
+Resources:
+  getAllCovidInformation:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: rest-api/
+      Handler: app.getAllCovidInformation
+      Runtime: nodejs16.x
+      Architectures:
+        - x86_64
+      Events:
+        getAllCovidInformation:
+          Type: Api
+          Properties:
+            Path: /getAllCovidInformation
+            Method: GET
+
+Outputs:
+  WebEndpoint:
+    Description: "Covid API"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
