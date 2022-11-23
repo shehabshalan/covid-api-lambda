@@ -13,5 +13,10 @@
   },
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "jest": {
+    "modulePaths": [
+      "<rootDir>/src/layer/nodejs/node_modules/"
+    ]
   }
 }
