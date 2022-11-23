@@ -61,6 +61,8 @@ build/Release
 node_modules/
 jspm_packages/
 
+!layer/nodejs/node_modules/
+
 # TypeScript v1 declaration files
 typings/
 
@@ -150,7 +152,8 @@ temp/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
