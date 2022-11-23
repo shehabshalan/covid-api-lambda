@@ -16,7 +16,7 @@ Resources:
     Properties:
       LayerName: api-layer
       Description: API Layer
-      ContentUri: layer/
+      ContentUri: src/layer/
       CompatibleRuntimes:
         - nodejs16.x
       RetentionPolicy: Retain
@@ -24,7 +24,7 @@ Resources:
   getHealth:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: lambdas/
+      CodeUri: src/lambdas/
       Handler: get-health.getHealth
       Runtime: nodejs16.x
       Architectures:
@@ -38,7 +38,7 @@ Resources:
   getAll:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: lambdas/
+      CodeUri: src/lambdas/
       Handler: get-all.getAll
       Runtime: nodejs16.x
       Layers:
@@ -54,7 +54,7 @@ Resources:
   getAllCountries:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: lambdas/
+      CodeUri: src/lambdas/
       Handler: get-all-countries.getAllCountries
       Runtime: nodejs16.x
       Layers:
@@ -70,7 +70,7 @@ Resources:
   getByCountry:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: lambdas/
+      CodeUri: src/lambdas/
       Handler: get-by-country.getByCountry
       Runtime: nodejs16.x
       Layers:
