@@ -61,7 +61,7 @@ build/Release
 node_modules/
 jspm_packages/
 
-!layer/nodejs/node_modules/
+!src/layer/nodejs/node_modules/
 
 # TypeScript v1 declaration files
 typings/
