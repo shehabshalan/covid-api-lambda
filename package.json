@@ -1,13 +1,10 @@
 {
-  "name": "covid-api",
+  "name": "covid-api-lambda",
   "version": "1.0.0",
   "description": "covid api using aws lambda",
-  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
+  "repository": "https://github.com/shehabshalan/covid-api-lambda",
   "author": "Shehab Shalan",
   "license": "MIT",
-  "dependencies": {
-    "axios": ">=0.21.1"
-  },
   "scripts": {
     "test": "jest"
   },
