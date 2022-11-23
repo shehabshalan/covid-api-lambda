@@ -6,6 +6,13 @@ The API to provide a summary information about Covid-19 cases and make queries b
 
 The API is documented using Swagger. You can find the documentation [here](https://app.swaggerhub.com/apis-docs/shehabshalan/COVID/1.0).
 
+### Requirements
+
+- Node.js
+- Docker
+- AWS CLI
+- SAM CLI
+
 ## How to use
 
 ### Installation
@@ -41,13 +48,8 @@ npm install
 npm test
 ```
 
-### Requirements
-
-- Node.js
-- AWS CLI
-- SAM CLI
-
 ### Folder structure
+
 ```
 ├── __tests__
 │ └── index.test.js
@@ -55,6 +57,13 @@ npm test
 │ └── event.json
 ├── lambdas
 │ └── index.js
+├── layer
+│ └── nodejs
+│   └── node_modules
+│     └── handler
+│       └── index.js
+│       └── package.json
+│   └── package.json
 ├── package.json
 ├── package-lock.json
 ├── README.md
