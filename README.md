@@ -50,8 +50,8 @@ npm test
 - SAM CLI
 
 ### Folder structure
-
-├── **tests**
+```
+├── __tests__
 │ └── index.test.js
 ├── events
 │ └── event.json
@@ -62,3 +62,4 @@ npm test
 ├── README.md
 ├── samconfig.toml
 └── template.yaml
+```
