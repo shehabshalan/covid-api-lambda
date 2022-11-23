@@ -10,19 +10,61 @@ Globals:
     Timeout: 10
 
 Resources:
-  getAllCovidInformation:
+  getHealth:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: rest-api/
-      Handler: app.getAllCovidInformation
+      CodeUri: lambdas/
+      Handler: get-health.getHealth
       Runtime: nodejs16.x
       Architectures:
         - x86_64
       Events:
-        getAllCovidInformation:
+        getAll:
           Type: Api
           Properties:
-            Path: /getAllCovidInformation
+            Path: /getHealth
+            Method: GET
+  getAll:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambdas/
+      Handler: get-all.getAll
+      Runtime: nodejs16.x
+      Architectures:
+        - x86_64
+      Events:
+        getAll:
+          Type: Api
+          Properties:
+            Path: /getAll
+            Method: GET
+  getAllCountries:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambdas/
+      Handler: get-all-countries.getAllCountries
+      Runtime: nodejs16.x
+      Architectures:
+        - x86_64
+      Events:
+        getAllCountries:
+          Type: Api
+          Properties:
+            Path: /getAllCountries
+            Method: GET
+  getByCountry:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambdas/
+      Handler: get-by-country.getByCountry
+      Runtime: nodejs16.x
+      Architectures:
+        - x86_64
+      Events:
+        getByCountry:
+          Type: Api
+          Properties:
+            Path: /getByCountry/{country}
             Method: GET
 
 Outputs:

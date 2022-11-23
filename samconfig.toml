@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "covid-api-lambda"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-u32k7uj3k2lk"
+s3_prefix = "covid-api-lambda"
+region = "eu-central-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
