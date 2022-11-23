@@ -1,8 +1,8 @@
-const { get } = require("./http");
+const apiHandler = require("apiHandler");
 
 exports.getAll = async (event, context) => {
   try {
-    const response = await get("/all");
+    const response = await apiHandler.get("/all");
     const { cases, todayCases, deaths, todayDeaths } = response;
     return {
       statusCode: 200,

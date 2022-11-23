@@ -1,8 +1,8 @@
-const { get } = require("./http");
+const apiHandler = require("apiHandler");
 
 exports.getAllCountries = async (event, context) => {
   try {
-    const response = await get("/countries");
+    const response = await apiHandler.get("/countries");
     return {
       statusCode: 200,
       body: JSON.stringify({

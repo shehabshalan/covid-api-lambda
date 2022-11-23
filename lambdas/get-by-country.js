@@ -1,10 +1,10 @@
-const { get } = require("./http");
+const apiHandler = require("apiHandler");
 
 exports.getByCountry = async (event, context) => {
   const country = event.pathParameters.country;
 
   try {
-    const response = await get(`/countries/${country}`);
+    const response = await apiHandler.get(`/countries/${country}`);
     if (response.message) {
       return {
         statusCode: 404,
