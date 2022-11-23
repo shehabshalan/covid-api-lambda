@@ -4,8 +4,6 @@ The API to provide a summary information about Covid-19 cases and make queries b
 
 ## API documentation
 
-<!-- make a link to this https://app.swaggerhub.com/apis-docs/shehabshalan/COVID/1.0 -->
-
 The API is documented using Swagger. You can find the documentation [here](https://app.swaggerhub.com/apis-docs/shehabshalan/COVID/1.0).
 
 ## How to use
