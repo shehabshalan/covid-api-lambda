@@ -2,7 +2,7 @@ const { get } = require("./http");
 
 exports.getAllCountries = async (event, context) => {
   try {
-    response = await get("/countries");
+    const response = await get("/countries");
     return {
       statusCode: 200,
       body: JSON.stringify({

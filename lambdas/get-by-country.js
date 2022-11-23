@@ -4,7 +4,7 @@ exports.getByCountry = async (event, context) => {
   const country = event.pathParameters.country;
 
   try {
-    response = await get(`/countries/${country}`);
+    const response = await get(`/countries/${country}`);
     if (response.message) {
       return {
         statusCode: 404,

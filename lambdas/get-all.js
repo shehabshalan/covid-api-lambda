@@ -2,8 +2,8 @@ const { get } = require("./http");
 
 exports.getAll = async (event, context) => {
   try {
-    response = await get("/all");
-    let { cases, todayCases, deaths, todayDeaths } = response;
+    const response = await get("/all");
+    const { cases, todayCases, deaths, todayDeaths } = response;
     return {
       statusCode: 200,
       body: JSON.stringify({
