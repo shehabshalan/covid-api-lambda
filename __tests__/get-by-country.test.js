@@ -1,4 +1,4 @@
-const getByCountry = require("../lambdas/get-by-country");
+const { getByCountry } = require("../src/lambdas/get-by-country");
 
 describe("getByCountry", () => {
   describe("when country is valid", () => {
@@ -8,7 +8,7 @@ describe("getByCountry", () => {
           country: "yemen",
         },
       };
-      const response = await getByCountry.getByCountry(event);
+      const response = await getByCountry(event);
       expect(response.statusCode).toBe(200);
     });
   });
@@ -20,7 +20,7 @@ describe("getByCountry", () => {
           country: "invalid-country",
         },
       };
-      const response = await getByCountry.getByCountry(event);
+      const response = await getByCountry(event);
       expect(response.statusCode).toBe(404);
     });
   });
